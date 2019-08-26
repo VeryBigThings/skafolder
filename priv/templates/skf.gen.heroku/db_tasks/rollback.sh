@@ -22,4 +22,4 @@ if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
   exit 0;
 fi
 args="$@"
-/opt/app/bin/local_drive_backend eval "DMFBackend.ReleaseTasks.rollback(~w($args))"
+/opt/app/bin/<%= app %> eval <%= "#{Macro.camelize(app)}.ReleaseTasks.rollback(~w($args))"%>
