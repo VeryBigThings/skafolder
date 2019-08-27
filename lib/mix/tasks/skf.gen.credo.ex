@@ -1,15 +1,11 @@
-defmodule Mix.Tasks.Skf.Gen.Docker do
+defmodule Mix.Tasks.Skf.Gen.Credo do
   use Mix.Task
 
   @templates [
-    Path.join(["skf.gen.docker", "Dockerfile"]),
-    Path.join(["skf.gen.docker", ".dockerignore"]),
-    Path.join(["skf.gen.docker", ".env.development"]),
-    Path.join(["skf.gen.docker", "entrypoint.sh"]),
-    Path.join(["skf.gen.docker", "docker-compose.yml"])
+    Path.join(["skf.gen.credo", "config", ".credo.exs"])
   ]
 
-  @shortdoc "Generate docker files"
+  @shortdoc "Generate credo config file"
   def run(_args) do
     if Mix.Project.umbrella?() do
       Mix.raise("mix phx.gen.json can only be run inside an application directory")
