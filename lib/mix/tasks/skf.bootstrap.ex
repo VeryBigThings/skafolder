@@ -9,6 +9,7 @@ defmodule Mix.Tasks.Skf.Bootstrap do
 
     Mix.Tasks.Skf.Gen.Makefile.run(args)
     Mix.Tasks.Skf.Gen.Docker.run(args)
+    Mix.Tasks.Skf.Gen.Credo.run(args)
     Mix.Tasks.Skf.Gen.Circleci.run(args)
     Mix.Tasks.Skf.Gen.Heroku.run(args)
   end
