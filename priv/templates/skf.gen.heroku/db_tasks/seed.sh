@@ -14,7 +14,7 @@ END
 };
 
 if [ "$1" == "-h" ] || [ "$1" == "--help" ]; then
-  myHelp;
+  my_help;
   exit 0;
 fi
 args="$@"
