@@ -1,5 +1,5 @@
 #!/bin/bash
-function myHelp () {
+function my_help () {
 # Using a here doc with standard out.
 cat <<-END
 Usage:
